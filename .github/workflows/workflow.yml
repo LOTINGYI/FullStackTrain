@@ -25,4 +25,15 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: cd server && npm install
-
+        
+      - name: Deploy to Heroku
+        uses: AkhileshNS/heroku-deploy@v3.0.5
+        with:
+          # This will be used for authentication. You can find it in your heroku homepage account settings
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          # Email that you use with heroku
+          heroku_email: 'a0987642936@gmail.com'
+          # The appname to use for deploying/updating
+          heroku_app_name: 'arcane-cove-04720'
+          # Set if your app is located in a subdirectory.
+          appdir: './server'
