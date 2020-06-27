@@ -24,11 +24,5 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install
-      
-      - name: Deploy to Heroku
-        env:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "arcane-cove-04720"
-          heroku_email: "a0987642936@gmail.com"  
-        run: cd server && git remote add heroku https://git.heroku.com/arcane-cove-04720.git && git push heroku master
+      - run: cd server && npm install
+
