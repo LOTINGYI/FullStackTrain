@@ -28,5 +28,7 @@ jobs:
       
       - name: Deploy to Heroku
         env:
-          HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "arcane-cove-04720"
+          heroku_email: "a0987642936@gmail.com"  
         run: cd server && git remote add heroku https://git.heroku.com/arcane-cove-04720.git && git push heroku master
