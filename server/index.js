@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 
+require('./models/User')
 require('./services/passport') // We just ensure it executes so we don't need var
 const keys = require('./config/keys')
 
