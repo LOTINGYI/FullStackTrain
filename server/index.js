@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
     res.send({ 'bye': 'buddy' })
 })
 
-require('./routes/authRoutes')(app);
+// require('./routes/authRoutes')(app);
 
 
 const PORT = process.env.PORT || 5000
