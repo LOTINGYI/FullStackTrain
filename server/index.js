@@ -6,7 +6,7 @@ const passport = require('passport')
 require('./models/User')
 require('./services/passport') // We just ensure it executes so we don't need var
 const keys = require('./config/keys')
-mongoose.connect(keys.mongoURI)
+mongoose.connect(keys.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 const app = express()
 
