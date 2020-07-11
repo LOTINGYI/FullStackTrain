@@ -18,9 +18,6 @@ app.use(cookieSession({
 app.use(passport.initialize())
 app.use(passport.session())
 
-app.get('/', (req, res) => {
-    res.send({ 'bye': 'buddy' })
-})
 
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
