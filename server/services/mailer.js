@@ -1,4 +1,3 @@
-const { response } = require('express')
 const sendgrid = require('sendgrid')
 const helper = sendgrid.mail
 const keys = require('../config/keys')
@@ -50,10 +49,6 @@ class Mailer extends helper.Mail {
         })
 
         const response = await this.sgApi.API(request)
-
-
-        // .then(val => console.log(val))
-        // .catch(err => console.log(err)) // actually send to sendGrid
         return response
 
     }
